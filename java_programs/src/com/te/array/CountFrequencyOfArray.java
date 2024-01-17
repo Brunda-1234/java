@@ -13,7 +13,9 @@ public class CountFrequencyOfArray {
 		
 		int[] array = { 1, 2, 3, 4, 1, 2, 3, 4, 5, 2, 2,5 };
 		
+		//Using Map 
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
 		for(int i = 0;i<array.length;i++) {
 			if(map.containsKey(array[i])) {
 				Integer ij = map.get(array[i]);
@@ -24,6 +26,7 @@ public class CountFrequencyOfArray {
 		
 		}
 		System.out.println(map);
+		//using for loop
 		 int max = Integer.MIN_VALUE;
 		for(Entry<Integer, Integer> entry : map.entrySet()) {
 			
@@ -34,13 +37,17 @@ public class CountFrequencyOfArray {
 		   
 		}
 		System.out.println(max);
+		
+		
 		for(Entry<Integer, Integer> entry2 : map.entrySet()) {
 			if(max == entry2.getValue()) {
 				System.err.println(entry2.getKey() + "this element is repeated for " +entry2.getValue());
 			}
 		}
+		
+		//using java 8
 		 Integer[] array2 = Arrays.stream(array).boxed().toArray(Integer[] :: new);
-		 
+		 System.out.println(array2);
 		 Map<Integer,Long> collect = Arrays.stream(array2).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		 collect.forEach((element,frequnecy)-> System.out.println("Elements:" + element +"FrequncyCount:" + frequnecy));
 	}
