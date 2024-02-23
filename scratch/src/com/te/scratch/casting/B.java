@@ -11,13 +11,13 @@ public class B extends A {
 	public static void main(String[] args) {
 		
 		B b = new B();
-		System.out.println(b.g);
-		System.err.println(b.a);
+		System.out.println(b.g +"////");
+		System.err.println(b.a +";;;;;;;;;");
 		b.d();
 		b.g();
 		
 		A a = new B(); // upcasting :--  Parent to child 
-		System.err.println(a.a);
+		System.err.println(a.a+"-----");
 		a.g();
 		
 		 B bsdg = (B) a;//Downcasting :-- child to parent

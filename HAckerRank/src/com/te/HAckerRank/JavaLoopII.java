@@ -15,7 +15,7 @@ public class JavaLoopII {
 			int b = sc.nextInt();
 			int iterationSeries = sc.nextInt();
 			
-			int term  = a;
+			int term=a;
 			for(int j=0;j<iterationSeries;j++) {
 				
 				term += (int)Math.pow(2, j)*b;

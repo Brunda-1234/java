@@ -23,6 +23,9 @@ public class Test {
         	sum +=Integer.parseInt(split[j]);
         }
         System.out.println(sum);
+      
+        	
+       
 	}
 
 }
